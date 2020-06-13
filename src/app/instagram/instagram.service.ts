@@ -15,7 +15,7 @@ export class InstagramService {
 
     getUserById(
         userId,
-        count = 50,
+        count = 500,
         after = '') {
         return this.http.get(`https://www.instagram.com/graphql/query/?query_id=17888483320059182&id=${userId}&first=${count}&after=${after}`)
             .pipe(map(res => res))
